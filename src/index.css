@@ -111,3 +111,8 @@
 .blu{
   background-color: #1773b0;
 }
+
+body {
+  overflow-x: hidden;
+;
+}

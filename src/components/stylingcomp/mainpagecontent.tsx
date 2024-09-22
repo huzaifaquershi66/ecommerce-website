@@ -175,7 +175,8 @@ useEffect(() => {
 // }
   return (
     <>
-      <div className="backi h-auto">
+    <div className="h-full w-full overflow-hidden">
+      <div className="backi h-auto ">
         <div className="my-3 h-auto w-full">
           <img
             src={
@@ -205,7 +206,7 @@ useEffect(() => {
          <h1 className="text-black font-serif text-[14px] lg:text-[17px] lg:whitespace-nowrap whitespace-normal ">Free Shipping On All Orders Above Rs 1,999</h1>
        </div>
      </div>
-     <div className="overflow-y-scroll h-[400px] overflow-x-hidden">
+     <div className="overflow-y-scroll h-[400px] md:overflow-x-hidden overflow-x-hidden">
      <div className="my-[60px] md:my-[70px]   mx-7   h-44 max-w-[450px]   rounded-lg bg-transparent border-2 border-gray-500">
        <div className="flex items-center lg:space-x-3 space-x-1 mx-5 px-6 my-1">
          <div className="h-16 lg:w-32 w-auto font-bold font-sans lg:text-[16px] text-[12px] ">
@@ -419,6 +420,7 @@ className="h-10 bg-transparent border-2 border-black min-w-[100px] mx-3 lg:mx-0 
     </div>
    ))} 
   
+     </div>
      </div>
      </div>
     </>

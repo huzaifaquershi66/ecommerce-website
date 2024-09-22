@@ -113,7 +113,7 @@ const Checkout = () => {
 
   
   return (
-    <div className="h-full w-full bg-white text-black relative">
+    <div className="h-full w-full bg-white text-black relative overflow-x-hidden">
       <div className="h-16 w-full flex items-center justify-between mx-24 my-5 relative">
         <img 
           src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSjyZygphpOyAH48IDkm8M27iNUc3uizu_5Dw&s"
@@ -129,7 +129,7 @@ const Checkout = () => {
         </span>
       </div>
       <div className='w-full h-[1px] bg-gray-400'></div>
-      <div className='grid md:grid-cols-2 h-full w-full'>
+      <div className='grid md:grid-cols-2 h-full w-full '>
         <div className='md:col-span-1 col-span-2 h-full max-w-[900px]'>
           <div className='md:mx-24 mx-4 my-16'>
             <div className='flex items-center space-x-2 justify-between'>

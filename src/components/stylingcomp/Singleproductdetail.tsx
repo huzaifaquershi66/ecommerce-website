@@ -129,8 +129,9 @@ const removesingleitem = (product:string)=>{
   
    return (
 <>
+<div className='h-full w-full overflow-x-hidden'>
 <div className="h-[1px] w-full bg-gray-400"></div>
-<div className="h-auto w-full backi">
+<div className="h-auto w-full backi ">
     <div className="py-6 flex items-center justify-center font-sans lg:text-[14px] md:text-[14px] text-[12px] whitespace-nowrap   ">
         <div className="space-x-2 flex items-center lg:mx-3 mx-1">
             <h2>Home</h2>
@@ -411,7 +412,7 @@ className="h-10 bg-transparent border-2 border-black min-w-[100px] mx-3 lg:mx-0 
      </div>
    </div>
 
-
+   </div>
 
 
   {/* )}   */}
