@@ -6,7 +6,7 @@ import { useSelector } from "react-redux";
 import { useEffect } from "react";
 import { RootState } from "../../store/store";
 import {faXmark,faCartPlus,faMinus,faPlus,faTrashCan,faCheck} from '@fortawesome/free-solid-svg-icons'; 
-import { Navigate, useNavigate } from "react-router-dom";
+import {  useNavigate } from "react-router-dom";
 import Iceblast from "./Iceblastproduct";
 
 import { useRef } from "react";

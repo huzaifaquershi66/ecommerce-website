@@ -4,9 +4,9 @@ import { useDispatch, useSelector } from 'react-redux';
 import { RootState } from '../../store/store';
 import productdata from './productdata';
 import { useState } from 'react';
-import { useEffect } from 'react';
+
 import { useNavigate } from 'react-router-dom';
-import { UseDispatch } from 'react-redux';
+
 import { setUserDetails } from '../../store/userdetailslice';
 
 type userdetails = {

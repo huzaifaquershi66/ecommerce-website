@@ -4,12 +4,12 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import {faChevronRight,faMinus,faPlus,faTrashCan,faXmark,faCartPlus,faChevronLeft,faCheck} from '@fortawesome/free-solid-svg-icons'; 
 import { useParams } from 'react-router-dom';
 import productdata from './productdata';
-import { useDispatch, UseDispatch } from 'react-redux';
+import { useDispatch } from 'react-redux';
 import { additem,aremovesingleitem,iscartopen,removeitem } from '../../store/slicee';
 import { useSelector } from 'react-redux';
 import { RootState } from '../../store/store';
 import { Link } from 'react-router-dom';
-import { useRef } from 'react';
+
 const Singleproductdetail = () => {
 const {productslug}= useParams()
 const [quantity, setQuantity] = useState(1);

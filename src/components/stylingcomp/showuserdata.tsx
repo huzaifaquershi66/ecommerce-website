@@ -1,11 +1,11 @@
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCircleCheck, faCircleExclamation, faChevronDown } from '@fortawesome/free-solid-svg-icons';
-import axios from 'axios';
+
 
 import { RootState } from '../../store/store';
-import { useSelector, UseSelector } from 'react-redux';
-import { setUserDetails } from '../../store/userdetailslice';
+import { useSelector } from 'react-redux';
+
 import productdata from './productdata';
 
 
