@@ -11,19 +11,7 @@ type cartoption = {
 
 
 
-type UserDetails = {
-    email: string | number;
-    firstname: string;
-    lastname: string;
-    address: string;
-    apartment: string;
-    city: string;
-    postalcode?: string;
-    phone: string;
-  };
-  interface UserState {
-    details: UserDetails | null;
-  }
+
   const initialState:cartoption ={
     isopen:false,
     items:{},
