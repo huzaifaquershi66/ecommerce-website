@@ -51,7 +51,7 @@ const Checkout = () => {
   const [address, setAddress] = useState<string>("");
   const [apartment, setApartment] = useState<string>("");
   const [city, setCity] = useState<string>("");
-  const [postalcode, setPostalcode] = useState<string>("");
+  // const [postalcode, setPostalcode] = useState<string>("");
   const [phone, setPhone] = useState<string>("");
 
   const [order, setOrder] = useState<userdetails | null>(null); 
@@ -96,12 +96,12 @@ const Checkout = () => {
       address,
       apartment,
       city,
-      postalcode,
+      // postalcode,
       phone,
     });
     if (userDetails) {
       setOrder(userDetails)
-   
+   console.log(order)
       dispatch(setUserDetails(userDetails))
       navigate("/userdetail")
     }else{

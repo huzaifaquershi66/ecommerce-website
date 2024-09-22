@@ -6,10 +6,10 @@ import { useSelector } from "react-redux";
 import { useEffect } from "react";
 import { RootState } from "../../store/store";
 import {faXmark,faCartPlus,faMinus,faPlus,faTrashCan,faCheck} from '@fortawesome/free-solid-svg-icons'; 
-import {  useNavigate } from "react-router-dom";
+
 import Iceblast from "./Iceblastproduct";
 
-import { useRef } from "react";
+
 import productdata from "./productdata";
 import { Link } from "react-router-dom";
 // import Singleproductdetail from "./Singleproductdetail";
@@ -23,17 +23,11 @@ const Mainpagecontent = () => {
  
  
   const [addedToCart, setAddedToCart] = useState<{ [key: string]: boolean }>({});
-const navigate = useNavigate()
-  const [quantity, setquantity] = useState<{ [key: string]: number }>({});
-  const [cartopen, setcartopen] = useState(false)
-  const [renderTrigger, setRenderTrigger] = useState(0);
-  const [openinput, setopeninput] = useState(false)
-  // const [openProductIndex, setOpenProductIndex] = useState<number | null>(null)
-  // const product = productdata.find((item) => item.productname === productslug);
+
+ 
+ 
   const {  isopen } = useSelector((state:RootState) => state.cart);
-  const handleinput = () => {
-    setopeninput(prevOpenInput => !prevOpenInput);
-  };
+
   const togglecarti = () => {
     if (!isopen) {
       dispatch(iscartopen());
@@ -77,22 +71,14 @@ const navigate = useNavigate()
     
     const items = useSelector((state:RootState) => state.cart.items);
   // }
-  const inputRef = useRef<HTMLInputElement | null>(null);
+
 
   // Function to focus the input
-  const focusInput = () => {
-    if (inputRef.current) {
-      inputRef.current.focus();
-    }
-  };
-
+  
   // Optionally, you can focus the input when the component mounts
  ;
 
-  const handleoneclick = ()=>{
-    focusInput();
-    handleinput()
-  }
+ 
   const additems = (product?: string, product2?: string) => {
     const itemToAdd = product || product2 || ""; // default to empty string
     if (itemToAdd) {
@@ -302,17 +288,17 @@ useEffect(() => {
          <input
         
            type="text"
-           className={`w-[464px] h-[90px] my-24 bg-transparent translate-y-[-100px] border-2 opacity-0 packing ${openinput ? 'show border-gray-500 opacity-100' : ''}`}
+           className={`w-[464px] h-[90px] my-24 bg-transparent translate-y-[-100px] border-2 opacity-0 packing `}
          />
        </div>
    
-       <div className={`h-[1px] max-w-[460px] bg-gray-700 mx-5 translate-y-[-500px] ${openinput ? 'show border-gray-500 opacity-100 translate-y-[-350px]' : ''}`}></div>
+       <div className={`h-[1px] max-w-[460px] bg-gray-700 mx-5 translate-y-[-500px]`}></div>
    
        <div className="mx-5 my-2 flex items-center space-x-28">
-         <h3 className={`font-sans font-semibold lg:text-[16px] text-[14px] translate-y-[-500px] ${openinput ? 'show border-gray-500 opacity-100 translate-y-[-350px]' : ''}`}>
+         <h3 className={`font-sans font-semibold lg:text-[16px] text-[14px] translate-y-[-500px]  }`}>
            Taxes and shipping calculated at checkout
          </h3>
-         <div className={`h-10 w-28 break-words translate-y-[-500px] ${openinput ? 'show border-gray-500 opacity-100 translate-y-[-350px]' : ''}`}>
+         <div className={`h-10 w-28 break-words translate-y-[-500px]`}>
         
    <h3 className="font-sans font-semibold lg:text-[17px] text-[14px] lg:translate-y-[-0px] translate-y-[-9px]">
      Total Price:{totalPrice}

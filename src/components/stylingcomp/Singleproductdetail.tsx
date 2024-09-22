@@ -18,7 +18,7 @@ const product = productdata.find((item) => item.productname === productslug);
 const [selectedImage, setSelectedImage] = useState(product?.productimage); // Initially, main product image is selected
 const [activeIndex, setActiveIndex] = useState(0);
 const items = useSelector((state:RootState) => state.cart.items);
-const [openinput, setopeninput] = useState(false)
+// const [openinput, setopeninput] = useState(false)
 const [mobileIndex, setMobileIndex] = useState(0);
 const [addedToCart, setAddedToCart] = useState<{ [key: string]: boolean }>({});
 const {  isopen } = useSelector((state:RootState) => state.cart);
@@ -385,17 +385,17 @@ className="h-10 bg-transparent border-2 border-black min-w-[100px] mx-3 lg:mx-0 
          <input
           //  ref={inputRef}
            type="text"
-           className={`w-[464px] h-[90px] my-24 bg-transparent translate-y-[-100px] border-2 opacity-0 packing ${openinput ? 'show border-gray-500 opacity-100' : ''}`}
+           className={`w-[464px] h-[90px] my-24 bg-transparent translate-y-[-100px] border-2 opacity-0 packing `}
          />
        </div>
    
-       <div className={`h-[1px] max-w-[460px] bg-gray-700 mx-5 translate-y-[-500px] ${openinput ? 'show border-gray-500 opacity-100 translate-y-[-350px]' : ''}`}></div>
+       <div className={`h-[1px] max-w-[460px] bg-gray-700 mx-5 translate-y-[-500px]`}></div>
    
        <div className="mx-5 my-2 flex items-center space-x-28">
-         <h3 className={`font-sans font-semibold lg:text-[16px] text-[14px] translate-y-[-500px] ${openinput ? 'show border-gray-500 opacity-100 translate-y-[-350px]' : ''}`}>
+         <h3 className={`font-sans font-semibold lg:text-[16px] text-[14px] translate-y-[-500px]`}>
            Taxes and shipping calculated at checkout
          </h3>
-         <div className={`h-10 w-28 break-words translate-y-[-500px] ${openinput ? 'show border-gray-500 opacity-100 translate-y-[-350px]' : ''}`}>
+         <div className={`h-10 w-28 break-words translate-y-[-500px] `}>
         
    <h3 className="font-sans font-semibold lg:text-[17px] text-[14px] lg:translate-y-[-0px] translate-y-[-9px]">
      Total Price:{totalPrice}
